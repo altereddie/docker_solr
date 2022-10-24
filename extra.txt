@@ -1,0 +1,19 @@
+    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+    <field name="ID" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+
+<field name="QID" type="string" indexed="true" stored="true" />
+<field name="lat" type="string" indexed="true" stored="true" />
+<field name="lon" type="string" indexed="true" stored="true" />
+<field name="description" type="string" indexed="true" stored="true" />
+<field name="text" type="string" indexed="true" stored="true" />
+<field name="link" type="string" indexed="true" stored="true" />
+<field name="datum" type="string" indexed="true" stored="true" />
+
+
+
+
+<requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+      <str name="config">db-data-config.xml</str>
+    </lst>
+  </requestHandler>
